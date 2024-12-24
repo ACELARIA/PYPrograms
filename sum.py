@@ -1,14 +1,10 @@
-def add(num1,num2):
-    print ("inside function")
-    print (num1,num2)
-    sum = num1+num2
-    print(sum)
-    return sum
+def count_matching_strings(strings):
+    count = 0
+    for string in strings:
+        if len(string) >= 2 and string[0] == string[-1]:
+            count += 1
+    return count
 
-
-num1 = int(input("Enter the first number: "))
-num2 = int(input("Enter the second number: "))
-
-sum = add(num1,num2)
-
-print("The sum is", sum);
+strings_list = ['abbba', 'xybdmz', 'cvnhf', 'aba', '1221']
+matching_strings_count = count_matching_strings(strings_list)
+print("Number of matching strings:", matching_strings_count)  
