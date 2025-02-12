@@ -1,12 +1,11 @@
 import math
 
-def is_perfect_square(x):
-    s = int(math.sqrt(x))
-    return s * s == x
+def perfect_square(x):
+    a = int(math.sqrt(x))
+    return a*a == x
 
 def is_fibonacci(n):
-    return is_perfect_square(5 * n * n + 4) or is_perfect_square(5 * n * n - 4)
-# A number is Fibonacci if and only if one or both of (5*n*n + 4) or (5*n*n - 4) is a perfect square
+    return perfect_square(5*n*n+4) or perfect_square(5*n*n-4)
 
 n = int(input("Enter a number: "))
 if is_fibonacci(n):
