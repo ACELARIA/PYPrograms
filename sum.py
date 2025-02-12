@@ -8,3 +8,4 @@ def count_matching_strings(strings):
 strings_list = ['abbba', 'xybdmz', 'cvnhf', 'aba', '1221']
 matching_strings_count = count_matching_strings(strings_list)
 print("Number of matching strings:", matching_strings_count)  
+

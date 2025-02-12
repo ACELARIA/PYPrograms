@@ -29,3 +29,13 @@ print("After sorting the list:", my_list)
 
 my_list.clear()
 print("After clearing the list:", my_list)
+
+
+def remove_duplicates(string_list):
+  
+  return list(set(string_list))
+
+my_list = ["1", "2", "1", "3", "2", "4"]
+unique_list = remove_duplicates(my_list)
+print("Original list:", my_list)
+print("List of unique strings:", unique_list)
