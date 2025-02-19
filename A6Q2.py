@@ -49,7 +49,8 @@ class Rock_paper_scissors:
         
         if self.current_round > self.total_rounds:
             print(self.check_game_winner())
-        
+
+n = input("enter the total number of rounds you would like to play : ")        
 game = Rock_paper_scissors(5)
     
 while game.current_round <= game.total_rounds:
