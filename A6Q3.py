@@ -55,12 +55,6 @@ unit =input("Enter unit from  inches, feet, yards, miles, kilometers, meters, ce
 c=Converter(length,unit)
 
 print(f"{c.length} {c.unit} is equal to:")
+print(c.feet())
 
-print(f"{c.inches():.2f} inches")
-print(f"{c.feet():.2f} feet")
-print(f"{c.yards():.2f} yards")
-print(f"{c.miles():.6f} miles")
-print(f"{c.kilometers():.6f} kilometers")
-print(f"{c.meters():.2f} meters")
-print(f"{c.centimeters():.2f} centimeters")
-print(f"{c.millimeters():.2f} millimeters")
+
