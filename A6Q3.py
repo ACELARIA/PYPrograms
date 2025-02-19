@@ -50,9 +50,12 @@ class Converter:
         return self.convert("millimeters")
 
 length=input("Enter length in numbers : ")
-Unit =input("Enter unit from  inches, feet, yards, miles, kilometers, meters, centimeters, millimeters: ")
-c=Converter(length,Unit)
+unit =input("Enter unit from  inches, feet, yards, miles, kilometers, meters, centimeters, millimeters: ")
+
+c=Converter(length,unit)
+
 print(f"{c.length} {c.unit} is equal to:")
+
 print(f"{c.inches():.2f} inches")
 print(f"{c.feet():.2f} feet")
 print(f"{c.yards():.2f} yards")
