@@ -49,13 +49,14 @@ class Converter:
     def millimeters(self):
         return self.convert("millimeters")
 
-if __name__ == "__main__":
-    c = Converter(9, 'inches')
-    
-    print(f"9 inches to feet: {c.feet()}")  
-    print(f"9 inches to yards: {c.yards()}")  
-    print(f"9 inches to miles: {c.miles()}")  
-    print(f"9 inches to centimeters: {c.centimeters()}")  
-    print(f"9 inches to kilometers: {c.kilometers()}") 
-    print(f"9 inches  to meters: {c.meters()}") 
-    print(f"9 inches  to millimeters: {c.millimeters()}")  
+length=int("Enter lenght in numbers : ")
+Unit =int("Enter unit from  inches, feet, yards, miles, kilometers, meters, centimeters, millimeters: ")
+print(f"{c.length} {c.unit} is equal to:")
+print(f"{c.inches():.2f} inches")
+print(f"{c.feet():.2f} feet")
+print(f"{c.yards():.2f} yards")
+print(f"{c.miles():.6f} miles")
+print(f"{c.kilometers():.6f} kilometers")
+print(f"{c.meters():.2f} meters")
+print(f"{c.centimeters():.2f} centimeters")
+print(f"{c.millimeters():.2f} millimeters")
