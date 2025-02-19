@@ -1,6 +1,7 @@
 def max_pieces(K):
-    return K + 1
-
+ a=K//2
+ b = K-a
+ return a*b
 T = int(input("Input number: "))
 
 for _ in range(T):
