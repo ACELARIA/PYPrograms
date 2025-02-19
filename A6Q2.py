@@ -14,9 +14,9 @@ class Rock_paper_scissors:
     def find_winner(self, user_choice, computer_choice):
         if user_choice == computer_choice:
             return "It's a tie!"
-        elif (user_choice == "rock" and computer_choice == "scissors") or \
-             (user_choice == "scissors" and computer_choice == "paper") or \
-             (user_choice == "paper" and computer_choice == "rock"):
+        elif ((user_choice == "rock" and computer_choice == "scissors") or 
+             (user_choice == "scissors" and computer_choice == "paper") or 
+             (user_choice == "paper" and computer_choice == "rock")):
             self.user_wins += 1
             return "You win this round!"
         else:
@@ -47,14 +47,12 @@ class Rock_paper_scissors:
         print(round_result)
         print(f"Score - You: {self.user_wins}, Computer: {self.computer_wins}")
         
-        # Check if the game is over
         if self.current_round > self.total_rounds:
             print(self.check_game_winner())
         
-if __name__ == "__main__":
-    game = Rock_paper_scissors(5)
+game = Rock_paper_scissors(5)
     
-    while game.current_round <= game.total_rounds:
+while game.current_round <= game.total_rounds:
         user_input = input("Enter your choice (rock, paper, or scissors): ").lower()
         if user_input in game.choices:
             game.play_round(user_input)
