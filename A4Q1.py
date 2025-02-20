@@ -11,8 +11,7 @@ def min_operations_to_palindrome(s):
     
     return operations
 
-print("Enter number of letters and the letters:")
-T = int(input()) 
+T = int(input("Enter number of letters and the letters:")) 
 
 for _ in range(T):
     s = input().strip() 
