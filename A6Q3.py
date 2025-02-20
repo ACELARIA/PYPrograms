@@ -16,35 +16,26 @@ class Converter:
 
         if self.unit not in self.conversion_factors:
             raise ValueError("Invalid unit. Please use a valid measurement unit.")
-
         self.length_in_inches = self.length / self.conversion_factors[self.unit]
 
     def inches(self):
         return self.length_in_inches
-
     def feet(self):
         return self.length_in_inches * self.conversion_factors["feet"]
-
     def yards(self):
         return self.length_in_inches * self.conversion_factors["yards"]
-
     def miles(self):
         return self.length_in_inches * self.conversion_factors["miles"]
-
     def millimeters(self):
         return self.length_in_inches * self.conversion_factors["millimeters"]
-
     def centimeters(self):
         return self.length_in_inches * self.conversion_factors["centimeters"]
-
     def meters(self):
         return self.length_in_inches * self.conversion_factors["meters"]
-
     def kilometers(self):
         return self.length_in_inches * self.conversion_factors["kilometers"]
 
 
-# Example usage:
 length = float(input("Enter length in numbers: "))
 unit = input("Enter unit from inches, feet, yards, miles, kilometers, meters, centimeters, millimeters: ")
 
