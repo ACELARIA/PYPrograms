@@ -36,7 +36,7 @@ class Converter:
         return self.length_in_inches * self.conversion_factors["kilometers"]
 
 
-length = float(input("Enter length in numbers: "))
+length = float(input("Enter length in inches: "))
 unit = input("Enter unit from inches, feet, yards, miles, kilometers, meters, centimeters, millimeters: ")
 
 try:
