@@ -31,7 +31,7 @@ class HindiTokenizer:
         return tokens
 
 tokenizer = HindiTokenizer()
-text = "नमस्कार! मेरा नाम अरुशी शर्मा है, मेरी ईमेल आईडी random@gmail.com है, और मेरा ट्विटर हैंडल @sharma_ace है। आज की तारीख 19/2/25 है और मेरी वेबसाइट https://www.example.com है"
+text = "नमस्कार! मेरा नाम अरुशी शर्मा है, मेरी ईमेल आईडी random@gmail.com है, और मेरा ट्विटर हैंडल @sharma_ace है। आज की तारीख 19/2/25 है और मेरी वेबसाइट https://www.random.com है"
 
 tokens = tokenizer.tokenize(text)
 
