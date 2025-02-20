@@ -6,8 +6,7 @@ def count_square_integers(a,b):
     
     return max(0,r-l+1)
 
-print("Enter numbers:")
-T = int(input())
+T = int(input("Enter number of test cases and numbers:"))
 
 for _ in range(T):
     a,b = map(int, input().split()) 
