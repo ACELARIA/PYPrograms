@@ -1,10 +1,7 @@
-def factorial(a):
-    if a==1:
-        return 1
-    factorial_op = a*factorial(a-1)
-    return factorial_op
-    
+import matplotlib
+matplotlib.use('TkAgg')  # Or 'QtAgg', 'WXAgg'
+import matplotlib.pyplot as plt
 
-a = int(input("enter number:\n"))
-fact = factorial(a)
-print("factorial is",fact)
+# Your plotting code here
+plt.plot([1, 2, 3], [4, 5, 6])
+plt.show()
