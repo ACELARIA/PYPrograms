@@ -34,14 +34,11 @@ def bisection_method(f, a, b, tol=1e-6, max_iter=100):
 
     return np.array(iterations)
 
-# Set interval [a, b]
 a = 0.0
 b = 3.0
 
-# Run bisection method
 updates = bisection_method(f, a, b)
 
-# Plotting
 x = np.linspace(a - 1, b + 1, 400)
 y = f(x)
 
@@ -57,4 +54,6 @@ plt.ylabel('f(x)')
 plt.title('Bisection Method for Root Finding')
 plt.legend()
 plt.grid(True)
-plt.show()
+
+plt.savefig("bisection_plot.png")
+print("Plot saved as 'bisection_plot.png'")
