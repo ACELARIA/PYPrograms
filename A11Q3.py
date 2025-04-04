@@ -1,7 +1,7 @@
 import pandas as pd
 
-asking_prices = pd.Series([12000, 25000, 15000, 5000, 18000, 23000, 28000])
-fair_prices = pd.Series([15000, 24000, 16000, 7000, 19000, 22000, 30000])
+asking_prices = pd.Series([1000, 2200, 1600, 500, 1700, 2900, 2600])
+fair_prices = pd.Series([1300, 2100, 1700, 700, 2000, 2600, 2800])
 
 good_deals = asking_prices[asking_prices < fair_prices]
 
