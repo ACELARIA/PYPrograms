@@ -8,4 +8,10 @@ urlpatterns = [
     path('remove-emp', views.removeEmp, name='remove-emp'),
     path('remove-emp/<int:empID>', views.removeEmp, name='remove-emp'),
     path('filter-emp', views.filterEmp, name='filter-emp'),
+    path('emp/update-emp/', views.updateEmp, name='update-emp'),
+    path('edit-emp/', views.updateEmp, name='update_emp'),
+    path('edit-emp/<int:emp_id>/', views.updateEmp, name='update_emp'),  # Pass emp_id as a URL parameter
+
+
+
 ]

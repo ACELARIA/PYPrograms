@@ -3,6 +3,7 @@ from emp_app.models import Employee, Department, Role
 from django.contrib import messages
 import json
 from django.db.models import Q
+from django.shortcuts import get_object_or_404
 
 # Create your views here.
 
@@ -91,3 +92,50 @@ def filterEmp(request):
     }
     return render(request, 'filter_emp.html', context)
 
+from django.shortcuts import render, get_object_or_404,redirect
+from django.contrib import messages
+from .models import Employee, Department, Role
+
+def updateEmp(request):
+
+    if request.method == 'POST':
+        selected_employee_id = request.POST.get('selected_employee')
+        employee = get_object_or_404(Employee, emp_id=selected_employee_id)
+
+        firstname = request.POST.get('first_name')
+        lastname = request.POST.get('last_name')
+        emp_dept = request.POST.get('department')
+        emp_role = request.POST.get('role')
+        salary = request.POST.get('salary')
+        bonus = request.POST.get('bonus')
+        phone = request.POST.get('phone_number')
+        hire_date = request.POST.get('hire_date')
+
+        if emp_dept == "department" or emp_role == "role":
+            messages.warning(request, "Select Department and Role")
+        else:
+            employee.first_name = firstname
+            employee.last_name = lastname
+            employee.dept = Department.objects.get(id=emp_dept)
+            employee.role = Role.objects.get(id=emp_role)
+            employee.salary = salary
+            employee.bonus = bonus
+            employee.phone_num = phone
+            employee.hire_date = hire_date
+
+            employee.save()
+            messages.success(request, "Successfully updated the employee details")
+            return redirect('/edit-emp/')
+
+            
+
+    # If it's not a POST request, render the page with the employees list
+    all_depts = Department.objects.all()
+    all_roles = Role.objects.all()
+    all_emps = Employee.objects.all()
+    context = {
+        'dept': all_depts,
+        'role': all_roles,
+        'employees': all_emps,
+    }
+    return render(request, 'edit_emp.html', context)

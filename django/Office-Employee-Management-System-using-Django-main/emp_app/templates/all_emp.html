@@ -17,6 +17,8 @@
   
   <body>
     <h1 class="text-center AED my-1">Employees Details</h1>
+    <br>
+    <a href="/emp/update-emp/{{e.id}}" class="btn btn-success btn-sm">Update</a>
     <table class="table my-4">
       <thead>
         <tr>
@@ -45,6 +47,7 @@
             <td>{{emp.phone_num}}</td>
             <td>{{emp.dept.location}}</td>
             <td>{{emp.hire_date}}</td>
+            
           </tr>
           {% endfor %}
         </tbody>
