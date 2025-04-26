@@ -40,7 +40,7 @@
       <ul class="list-group">
         {% for emp in employees %}
           <li class="list-group-item emp-list-item"
-              data-id="{{ emp.id }}"
+              data-id="{{emp.emp_id}}"
               data-firstname="{{ emp.first_name }}"
               data-lastname="{{ emp.last_name }}"
               data-dept="{{ emp.dept.id }}"
@@ -58,8 +58,7 @@
     <div class="form-container">
       <form method="POST" action="/edit-emp/">
         {% csrf_token %}
-        <input type="hidden" name="emp_id" id="emp_id">
-
+        <input type="hidden" name="emp_id" id="emp_id" value="{{emp.emp_id}}"/>
         <div class="mb-3">
           <label for="first_name" class="form-label">First Name:</label>
           <input type="text" class="form-control" name="first_name" id="first_name" required>

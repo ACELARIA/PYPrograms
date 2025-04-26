@@ -99,7 +99,8 @@ from .models import Employee, Department, Role
 def updateEmp(request):
 
     if request.method == 'POST':
-        selected_employee_id = request.POST.get('selected_employee')
+        print(request.POST)
+        selected_employee_id = request.POST.get('emp_id')
         employee = get_object_or_404(Employee, emp_id=selected_employee_id)
 
         firstname = request.POST.get('first_name')
