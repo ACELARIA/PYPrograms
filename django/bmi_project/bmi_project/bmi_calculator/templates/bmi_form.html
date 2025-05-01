@@ -9,10 +9,10 @@
 		{% csrf_token %}
 		<label for="weight">Weight (KG): </label>
 		<input type="text" id="weight" name="weight" required>
-		<br/>
+		<br>
 		<label for="height">Height (cm): </label>
 		<input type="text" id="height" name="height" required>
-		<br/>
+		<br>
 		<button type="submit">Calculate BMI</button>
 	</form>
 	{% if bmi %}
