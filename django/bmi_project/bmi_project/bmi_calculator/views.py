@@ -18,4 +18,3 @@ def calcBmi(weightKg, heightCm):
 		return "[ERROR] Invalid value(s); Failed to calculate BMI.";
 	heightM = heightCm / 100.0 # Height in meter.
 	return round(weightKg / (heightM * heightM), 2)
-
