@@ -488,7 +488,6 @@ y_iris = iris.target
 iris_model = make_pipeline(
     StandardScaler(),
     LogisticRegression(
-        multi_class="multinomial",
         max_iter=5000,
         random_state=42
     )
