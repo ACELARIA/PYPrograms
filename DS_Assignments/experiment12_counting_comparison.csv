@@ -1,0 +1,3 @@
+Method,Estimated Distinct Elements,Memory Requirement
+Exact Counting,6280,Higher for large streams
+Approximate Sampling,9460,Lower for the sample

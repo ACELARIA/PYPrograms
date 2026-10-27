@@ -1,0 +1,8 @@
+support,itemsets
+0.8,frozenset({'Bread'})
+0.8,frozenset({'Butter'})
+0.8,frozenset({'Milk'})
+0.6,"frozenset({'Butter', 'Bread'})"
+0.6,"frozenset({'Milk', 'Bread'})"
+0.6,"frozenset({'Butter', 'Milk'})"
+0.4,"frozenset({'Butter', 'Milk', 'Bread'})"

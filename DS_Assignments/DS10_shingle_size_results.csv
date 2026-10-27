@@ -1,0 +1,6 @@
+Shingle Size (k),Document A Shingles,Document B Shingles,Jaccard Similarity
+1,15,12,0.5882
+2,14,11,0.3889
+3,13,10,0.2105
+4,12,9,0.1667
+5,11,8,0.1176
